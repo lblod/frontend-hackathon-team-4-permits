@@ -1,0 +1,20 @@
+<AuTable>
+  <:header>
+    <tr>
+      <th>Titel toelatingsaanvraag</th>
+      <th>Datum aanvraag</th>
+      <th>Beslissing</th>
+      <th>Acties</th>
+    </tr>
+  </:header>
+  <:body>
+    {{#each @requests as |request|}}
+      <tr>
+        <td>{{request.title}}</td>
+        <td>{{request.date}}</td>
+        <td>{{request.decision}}</td>
+        <td><AuLink @route={{request.link}}>Details</AuLink></td>
+      </tr>
+    {{/each}}
+  </:body>
+</AuTable>

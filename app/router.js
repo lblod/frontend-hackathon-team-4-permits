@@ -8,7 +8,18 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  // other routes above
+  this.route('citizen', function () {
+    this.route('index');
+    this.route('search-erfgoed');
+  });
+  this.route('municipality', function () {
+    this.route('index');
+  });
+  this.route('heritage', function () {
+    this.route('index');
+    this.route('request', { path: '/aanvraag/:post_id' });
+  });
+
   externalRoute(this);
   fallbackRoute(this);
 });

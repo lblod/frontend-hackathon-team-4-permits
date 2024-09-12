@@ -1,0 +1,31 @@
+{{page-title "Municipality"}}
+
+<div
+  id="main"
+  itemprop="mainContentOfPage"
+  role="main"
+  tabindex="-1"
+  class="au-c-main-container__content au-c-main-container__content--scroll"
+>
+  <section class="au-o-region-large au-o-layout au-o-grid au-o-grid--small">
+    <div class="au-o-grid__item">
+      <AuCard as |c|><c.header>
+          <AuHeading>Overzicht toelatingsaanvragen</AuHeading>
+        </c.header>
+        <c.content>
+          <div class="au-o-grid">
+            <div class="au-o-grid__item au-u-1-2"><AuInput
+                placeholder="Zoek een toelatingsaanvraag"
+                @width="block"
+                @icon="search"
+              /></div>
+            <div class="au-o-grid__item">
+              <RequestsTable @requests={{@model}} />
+            </div>
+          </div>
+
+        </c.content></AuCard>
+
+    </div>
+  </section>
+</div>
