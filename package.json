@@ -11,7 +11,7 @@
     "test": "tests"
   },
   "scripts": {
-     "build": "ember build --environment=production",
+    "build": "ember build --environment=production",
     "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "concurrently \"npm:lint:css -- --fix\"",
@@ -50,7 +50,9 @@
     "ember-concurrency": "^4.0.2",
     "ember-data": "~4.11.3",
     "ember-fetch": "^8.1.2",
+    "ember-intl": "^7.0.6",
     "ember-load-initializers": "^2.1.2",
+    "ember-metis": "^0.11.0",
     "ember-modifier": "^4.1.0",
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^6.2.0",
