@@ -40,7 +40,9 @@
                 @width="block"
                 @icon="search"
               /></div>
-            <div class="au-o-grid__item">Er zijn geen zoekresultaten.</div>
+            <div class="au-o-grid__item">
+              <RequestsTable @requests={{@model}} />
+            </div>
           </div>
 
         </c.content></AuCard>
