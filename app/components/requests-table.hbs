@@ -13,7 +13,7 @@
         <td>{{request.title}}</td>
         <td>{{request.date}}</td>
         <td>{{request.decision}}</td>
-        <td><AuLink @route={{request.link}}>Details</AuLink></td>
+        <td><AuLink @route="heritage.request" @model={{request.id}}>Details</AuLink></td>
       </tr>
     {{/each}}
   </:body>

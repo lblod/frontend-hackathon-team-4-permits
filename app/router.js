@@ -17,7 +17,7 @@ Router.map(function () {
   });
   this.route('heritage', function () {
     this.route('index');
-    this.route('request', { path: '/aanvraag/:post_id' });
+    this.route('request', { path: '/aanvraag/:id' });
   });
 
   externalRoute(this);
