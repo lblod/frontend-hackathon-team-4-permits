@@ -1,0 +1,20 @@
+{{page-title "Index"}}
+<AuToolbar @border="bottom" @size="large" @nowrap="{{true}}" as |Group|>
+  <Group>
+    <div>
+      <AuHeading @skin="2" data-test-loket="subsidiebeheer-page-title">Erfgoed</AuHeading>
+      <p>Hier vindt u een overzicht van uw aanvragen.</p>
+    </div>
+  </Group>
+  <Group>
+    <div>
+      <AuLink
+        @skin="button"
+        @route="citizen.search-erfgoed"
+      >
+        Nieuwe aanvraag
+      </AuLink>
+    </div>
+  </Group>
+</AuToolbar>
+{{outlet}}
