@@ -1,20 +1,50 @@
 {{page-title "Index"}}
-<AuToolbar @border="bottom" @size="large" @nowrap="{{true}}" as |Group|>
-  <Group>
-    <div>
-      <AuHeading @skin="2" data-test-loket="subsidiebeheer-page-title">Erfgoed</AuHeading>
-      <p>Hier vindt u een overzicht van uw aanvragen.</p>
+<div
+  id="main"
+  itemprop="mainContentOfPage"
+  role="main"
+  tabindex="-1"
+  class="au-c-main-container__content au-c-main-container__content--scroll"
+>
+  <section class="au-o-region-large au-o-layout au-o-grid au-o-grid--small">
+    <div class="au-o-grid__item au-u-1-2">
+      <AuCard as |c|><c.header>
+          <AuHeading>Een toelating aanvragen</AuHeading>
+          <p>Via dit loket kan je een toelating voor handelingen aanvragen.</p>
+        </c.header>
+        <c.content><AuButton @width="block">Start een nieuwe toelatingsaanvraag</AuButton></c.content></AuCard>
     </div>
-  </Group>
-  <Group>
-    <div>
-      <AuLink
-        @skin="button"
-        @route="citizen.search-erfgoed"
-      >
-        Nieuwe aanvraag
-      </AuLink>
+    <div class="au-o-grid__item au-u-1-2">
+      <AuCard as |c|><c.header>
+          <AuHeading>Vragen of problemen?</AuHeading>
+        </c.header>
+        <c.content><p><AuLink>Wanneer moet ik een toelating aanvragen?</AuLink><br
+            />
+            <AuLink>Wanneer moet ik een toelating aanvragen?</AuLink><br />
+            <AuLink>Wat is het verschil tussen toelatingsplicht en
+              meldingsplicht?</AuLink><br />
+            <AuLink>Waarom zie ik voor sommige aanvragen geen beslissing?</AuLink><br
+            /></p>
+          <p>Een andere vraag of probleem? <AuLink>Contacteer ons</AuLink></p>
+        </c.content></AuCard>
+
     </div>
-  </Group>
-</AuToolbar>
-{{outlet}}
+    <div class="au-o-grid__item">
+      <AuCard as |c|><c.header>
+          <AuHeading>Overzicht toelatingsaanvragen</AuHeading>
+        </c.header>
+        <c.content>
+          <div class="au-o-grid">
+            <div class="au-o-grid__item au-u-1-2"><AuInput
+                placeholder="Zoek een toelatingsaanvraag"
+                @width="block"
+                @icon="search"
+              /></div>
+            <div class="au-o-grid__item">Er zijn geen zoekresultaten.</div>
+          </div>
+
+        </c.content></AuCard>
+
+    </div>
+  </section>
+</div>
