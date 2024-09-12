@@ -9,7 +9,7 @@ export default class SearchErfgoedController extends Controller {
     if (!response.ok) {
       throw new Error('Network response was not ok ' + response.statusText);
     }
-    return response.json(); 
+    return response.json();
     })
     .then(data => {
       const ids = data.data.attributes.ids;
@@ -18,15 +18,15 @@ export default class SearchErfgoedController extends Controller {
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
     });
-    
+
     this.getJsonWithId('98888')
   }
 
   getJsonWithId(id) {
-    return fetch(`https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/${id}`, { 
-      headers: { 
-          "Accept": "application/json" 
-      } 
+    return fetch(`https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/${id}`, {
+      headers: {
+          "Accept": "application/json"
+      }
   })
   .then(response => {
       if (!response.ok) {

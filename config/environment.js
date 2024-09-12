@@ -14,6 +14,10 @@ module.exports = function (environment) {
       },
     },
 
+    metis: {
+      baseUrl: "http://data.redpencil.io/"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
