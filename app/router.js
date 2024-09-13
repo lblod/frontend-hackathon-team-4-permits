@@ -11,7 +11,7 @@ Router.map(function () {
   this.route('citizen', function () {
     this.route('index');
     this.route('search-erfgoed');
-    this.route('generic-admission-duties');
+    this.route('generic-admission-duties', { path: 'admission/:id' });
     this.route('specific-admission-duties');
     this.route('personal-info');
     this.route('details-operation');

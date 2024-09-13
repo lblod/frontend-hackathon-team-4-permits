@@ -6,7 +6,27 @@
   @prevStepLink="citizen.search-erfgoed"
   @nextStepLink="citizen.specific-admission-duties"
 >
-  <ConceptCheckboxTree @model={{@model}} />
+  {{#let @model.building as |info|}}
+    <AuCard as |c|>
+      <c.header>
+        <AuLink @route="citizen.generic-admission-duties" @model={{info.id}}>
+          <AuHeading @skin="4">
+            {{info.naam}}
+          </AuHeading>
+        </AuLink>
+      </c.header>
+      <c.content>
+        <AuContent>
+          {{info.locatie.omschrijving}}
+        </AuContent>
+        <AuContent>
+          {{info.korte_beschrijving}}
+        </AuContent>
+      </c.content>
+    </AuCard>
+  {{/let}}
+
+  <ConceptCheckboxTree @model={{@model.constraints}} />
 
   <AuCheckboxGroup as |Group|>
     <Group.Checkbox @value="checkboxOne">De aanmerkelijke reliëfwijziging van de

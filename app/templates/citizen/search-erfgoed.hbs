@@ -22,7 +22,7 @@
       {{#each this.heritageInformation as |info|}}
         <AuCard as |c|>
           <c.header>
-            <AuLink @route="citizen.generic-admission-duties">
+            <AuLink @route="citizen.generic-admission-duties" @model={{info.id}}>
               <AuHeading @skin="4">
                 {{info.naam}}
               </AuHeading>
