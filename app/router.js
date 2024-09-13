@@ -14,6 +14,7 @@ Router.map(function () {
     this.route('generic-admission-duties');
     this.route('specific-admission-duties');
     this.route('personal-info');
+    this.route('details-operation');
   });
   this.route('municipality', function () {
     this.route('index');

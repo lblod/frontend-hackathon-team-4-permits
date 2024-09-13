@@ -1,0 +1,22 @@
+<NewRequestStep
+  @currentStep={{4}}
+  @title="Gegevens van de handeling"
+  @description="Beschrijf de handeling die u wilt uitvoeren."
+  @prevStepLink="citizen.personal-info"
+  @nextStepLink="citizen"
+>
+  <div class="au-o-grid au-o-grid--small">
+    <div class="au-o-grid__item au-u-1-2">
+      <AuLabel>Vermoedelijke startdatum handeling</AuLabel>
+      <AuDateInput @width="block" />
+    </div>
+    <div class="au-o-grid__item au-u-1-2">
+      <AuLabel>Vermoedelijke einddatum handeling</AuLabel>
+      <AuDateInput @width="block" />
+    </div>
+    <div class="au-o-grid__item">
+      <AuLabel>Beschrijving</AuLabel>
+      <AuTextarea @width="block" />
+    </div>
+  </div>
+</NewRequestStep>
