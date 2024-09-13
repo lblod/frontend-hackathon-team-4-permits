@@ -15,7 +15,7 @@ module.exports = function (environment) {
     },
 
     metis: {
-      baseUrl: "http://data.redpencil.io/"
+      baseUrl: "http://app.hackathon-4.s.redhost.be/"
     },
 
     APP: {
