@@ -1,23 +1,39 @@
 {{page-title "SearchErfgoed"}}
+<div class="au-c-main-container__content au-c-main-container__content--scroll">
+  <section class="au-o-region-large">
+    <AuToolbar as |Group|>
+      <Group>
+        <label for="search-input">Enter Search Term:</label>
+        <AuInput
+          id="search-input" 
+          type="text" 
+          value={{this.searchTerm}} 
+          oninput={{this.updateSearchTerm}} 
+          placeholder="Enter search term" 
+        />
+         <AuButton {{on "click" this.performSearch}}>Search</AuButton>
+      </Group>
+    </AuToolbar>
+  </section>
 
-<div>
-  <label for="search-input">Enter Search Term:</label>
-  <input 
-    id="search-input" 
-    type="text" 
-    value={{this.searchTerm}} 
-    oninput={{this.updateSearchTerm}} 
-    placeholder="Enter search term" 
-  />
-
-  <button {{on "click" this.performSearch}}>Search</button>
-</div>
-
-<div>
-  <h2>Heritage Information:</h2>
-  <ul>
-    {{#each this.heritageInformation as |info|}}
-      <li>{{info.naam}}</li>
-    {{/each}}
-  </ul>
+  <div>
+    <h2>Heritage Information:</h2>
+    <ul>
+      {{#each this.heritageInformation as |info|}}
+        <AuCard as |c|><c.header>
+            <AuHeading
+              @skin="4"
+            >
+              {{info.naam}}
+            </AuHeading>
+          </c.header>
+          <c.content>
+            <AuContent>
+              {{info.locatie.omschrijving}}
+            </AuContent>
+          </c.content>
+        </AuCard>
+      {{/each}}
+    </ul>
+  </div>
 </div>

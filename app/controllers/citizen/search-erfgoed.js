@@ -7,7 +7,9 @@ export default class SearchErfgoedController extends Controller {
   @tracked searchTerm = '';
 
   get ids() {
-    const url = `/id-search?search=${this.searchTerm}`;
+    const encodedSearchTerm = encodeURIComponent(this.searchTerm.trim());
+    const url = `/id-search?search=${encodedSearchTerm}`;
+    console.log(url);
 
     fetch(url)
       .then(response => {
