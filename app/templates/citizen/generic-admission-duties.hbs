@@ -1,31 +1,11 @@
 <NewRequestStep
   @currentStep={{2}}
-  @title="Heilige Geestkapel"
-  @subtitle="Generieke toelatingsplichten"
-  @description="Duid aan indien de werken van toepassing zijn op volgende zaken:"
+  @title={{@model.building.naam}}
+  @subtitle={{@model.building.locatie.omschrijving}}
+  @description={{@model.building.korte_beschrijving}}
   @prevStepLink="citizen.search-erfgoed"
   @nextStepLink="citizen.specific-admission-duties"
 >
-  {{#let @model.building as |info|}}
-    <AuCard as |c|>
-      <c.header>
-        <AuLink @route="citizen.generic-admission-duties" @model={{info.id}}>
-          <AuHeading @skin="4">
-            {{info.naam}}
-          </AuHeading>
-        </AuLink>
-      </c.header>
-      <c.content>
-        <AuContent>
-          {{info.locatie.omschrijving}}
-        </AuContent>
-        <AuContent>
-          {{info.korte_beschrijving}}
-        </AuContent>
-      </c.content>
-    </AuCard>
-  {{/let}}
-
   <ConceptCheckboxTree @model={{@model.constraints}} />
 
   <AuCheckboxGroup as |Group|>
