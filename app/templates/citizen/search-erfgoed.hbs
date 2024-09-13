@@ -1,39 +1,44 @@
 {{page-title "SearchErfgoed"}}
-<div class="au-c-main-container__content au-c-main-container__content--scroll">
-  <section class="au-o-region-large">
-    <AuToolbar as |Group|>
-      <Group>
-        <label for="search-input">Enter Search Term:</label>
-        <AuInput
-          id="search-input" 
-          type="text" 
-          value={{this.searchTerm}} 
-          oninput={{this.updateSearchTerm}} 
-          placeholder="Enter search term" 
-        />
-         <AuButton {{on "click" this.performSearch}}>Search</AuButton>
-      </Group>
-    </AuToolbar>
-  </section>
 
+<NewRequestStep
+  @currentStep={{1}}
+  @title="Zoek op naam of locatie"
+  @description="Geef het adres van de werken om te zien of het een beschermd erfgoed is."
+  @prevStepLink="citizen"
+  @nextStepLink="citizen.generic-admission-duties"
+>
+  <AuInput
+    id="search-input"
+    type="text"
+    @width="block"
+    style="width: 50%;"
+    value={{this.searchTerm}}
+    oninput={{this.updateSearchTerm}}
+    placeholder="Zoek op naam of locatie"
+  />
+  <AuButton {{on "click" this.performSearch}}>Zoek</AuButton>
   <div>
     <h2>Heritage Information:</h2>
     <ul>
       {{#each this.heritageInformation as |info|}}
-        <AuCard as |c|><c.header>
-            <AuHeading
-              @skin="4"
-            >
-              {{info.naam}}
-            </AuHeading>
+        <AuCard as |c|>
+          <c.header>
+            <AuLink @route="citizen.generic-admission-duties">
+              <AuHeading @skin="4">
+                {{info.naam}}
+              </AuHeading>
+            </AuLink>
           </c.header>
           <c.content>
             <AuContent>
               {{info.locatie.omschrijving}}
+            </AuContent>
+            <AuContent>
+              {{info.korte_beschrijving}}
             </AuContent>
           </c.content>
         </AuCard>
       {{/each}}
     </ul>
   </div>
-</div>
+</NewRequestStep>
