@@ -12,7 +12,11 @@
           <AuHeading>Een toelating aanvragen</AuHeading>
           <p>Via dit loket kan je een toelating voor handelingen aanvragen.</p>
         </c.header>
-        <c.content><AuButton @width="block">Start een nieuwe toelatingsaanvraag</AuButton></c.content></AuCard>
+        <c.content><AuLink
+            @width="block"
+            @skin="button"
+            @route="citizen.search-erfgoed"
+          >Start een nieuwe toelatingsaanvraag</AuLink></c.content></AuCard>
     </div>
     <div class="au-o-grid__item au-u-1-2">
       <AuCard as |c|><c.header>
