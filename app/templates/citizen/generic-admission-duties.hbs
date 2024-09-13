@@ -6,6 +6,8 @@
   @prevStepLink="citizen.generic-admission-duties"
   @nextStepLink="citizen.specific-admission-duties"
 >
+  <ConceptCheckboxTree @model={{@model}} />
+
   <AuCheckboxGroup as |Group|>
     <Group.Checkbox @value="checkboxOne">De aanmerkelijke reliëfwijziging van de
       bodem.</Group.Checkbox>

@@ -1,0 +1,21 @@
+{{@model.label}}
+{{!-- This should be recursive but that may cause issues with incorrect data --}}
+<ul>
+  {{#each @model.children as |child|}}
+    <li>
+      {{child.label}}
+      <ul>
+        {{#each child.children as |child|}}
+          <li>
+            {{child.label}}
+            <ul>
+              {{#each child.children as |child|}}
+                {{child.label}}
+              {{/each}}
+            </ul>
+          </li>
+        {{/each}}
+      </ul>
+    </li>
+  {{/each}}
+</ul>
