@@ -13,6 +13,7 @@ Router.map(function () {
     this.route('search-erfgoed');
     this.route('generic-admission-duties');
     this.route('specific-admission-duties');
+    this.route('personal-info');
   });
   this.route('municipality', function () {
     this.route('index');
