@@ -1,0 +1,16 @@
+<NewRequestStep
+  @currentStep={{2}}
+  @title="Heilige Geestkapel"
+  @subtitle="Generieke toelatingsplichten"
+  @description="Duid aan indien de werken van toepassing zijn op volgende zaken:"
+  @prevStepLink="citizen.generic-admission-duties"
+  @nextStepLink="citizen.specific-admission-duties"
+>
+  <AuCheckboxGroup as |Group|>
+    <Group.Checkbox @value="checkboxOne">De aanmerkelijke reliëfwijziging van de
+      bodem.</Group.Checkbox>
+    <Group.Checkbox @value="checkboxTwo">Elke handeling die een aanzienlijke
+      wijziging van de landschapskenmerken tot gevolg heeft, met uitzondering
+      van cultuurgewassen, onder meer voor de landbouw, en tuinbeplanting.</Group.Checkbox>
+  </AuCheckboxGroup>
+</NewRequestStep>

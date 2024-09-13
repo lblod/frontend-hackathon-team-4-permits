@@ -11,6 +11,8 @@ Router.map(function () {
   this.route('citizen', function () {
     this.route('index');
     this.route('search-erfgoed');
+    this.route('generic-admission-duties');
+    this.route('specific-admission-duties');
   });
   this.route('municipality', function () {
     this.route('index');

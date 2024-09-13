@@ -1,0 +1,22 @@
+<NewRequestStep
+  @currentStep={{2}}
+  @title="Heilige Geestkapel"
+  @subtitle="Specifieke toelatingsplichten"
+  @description="Duid aan indien de werken van toepassing zijn op volgende zaken:"
+  @prevStepLink="citizen.generic-admission-duties"
+  @nextStepLink="citizen.specific-admission-duties"
+>
+  <AuCheckboxGroup as |Group|>
+    <Group.Checkbox @value="1">Het plaatsen, slopen, verbouwen of heropbouwen
+      van een constructie.</Group.Checkbox>
+    <Group.Checkbox @value="2">Het verwijderen, vervangen, wijzigen of
+      verstevigen van constructieve elementen.</Group.Checkbox>
+    <Group.Checkbox @value="2">Hhet verwijderen, vervangen of wijzigen van
+      historische materialen en het toepassen van behandelingen met als doel de
+      historische materialen te reinigen, te herstellen, te verduurzamen of te
+      beschermen tegen verweer en aantasting.</Group.Checkbox>
+    <Group.Checkbox @value="3">Het uitvoeren van werken aan het dak en de
+      buitenmuren van constructies.</Group.Checkbox>
+    <Group.Checkbox @value="4">Het uitvoeren van de volgende omgevingswerken.</Group.Checkbox>
+  </AuCheckboxGroup>
+</NewRequestStep>

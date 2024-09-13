@@ -1,0 +1,37 @@
+<AuToolbar @size="medium" @skin="tint" @border="bottom" as |Group|>
+  <Group>
+    <ul class="au-c-list-horizontal au-c-list-horizontal--small">
+      <li class="au-c-list-horizontal__item">
+        <AuLink @route="citizen" @icon="arrow-left">
+          Overzicht
+        </AuLink>
+      </li>
+      <li class="au-c-list-horizontal__item">
+        Nieuwe aanvraag
+      </li>
+      <li class="au-c-list-horizontal__item">
+        Stap
+        {{@currentStep}}
+        van 5
+      </li>
+    </ul>
+  </Group>
+</AuToolbar>
+<div class="au-c-main-container__content au-c-main-container__content--scroll">
+  <section class="au-o-region-large au-o-layout">
+    <AuCard as |c|><c.header>
+        <AuHeading>{{@title}}</AuHeading>
+        <p style="font-weight: bold;">{{@subtitle}}</p>
+        <p>{{@description}}</p>
+      </c.header>
+      <c.content style="font-size: small;">
+        {{yield}}
+      </c.content>
+      <c.footer style="margin-left: auto;">
+        <AuLink @skin="button-secondary" @route={{@prevStepLink}}>Terug</AuLink>
+        <AuLink @skin="button" @route={{@nextStepLink}}>Ga verder</AuLink>
+      </c.footer>
+    </AuCard>
+  </section>
+
+</div>
