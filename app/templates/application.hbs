@@ -32,17 +32,11 @@
     </li>
   </AuMainHeader>
 
-  {{#if this.session.isAuthenticated}}
-    <AuMainContainer as |main|>
-      <main.content>
-        <AuBodyContainer>
-          <AuBodyContainer id="content">
-            {{outlet}}
-          </AuBodyContainer>
-        </AuBodyContainer>
-      </main.content>
-    </AuMainContainer>
-  {{else}}
-    {{outlet}}
-  {{/if}}
+  <AuMainContainer as |main|>
+    <main.content>
+      <AuBodyContainer @scroll={{true}} id="content">
+        {{outlet}}
+      </AuBodyContainer>
+    </main.content>
+  </AuMainContainer>
 </AuApp>
