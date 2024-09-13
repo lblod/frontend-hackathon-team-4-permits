@@ -2,10 +2,7 @@
 
 <AuApp>
   <AuMainHeader
-    {{!-- @brandLink={{unless
-      this.session.isAuthenticated
-      "https://www.vlaanderen.be/nl"
-    }} --}}
+    
     @homeRoute="index"
     @appTitle="Toelatingsaanvragen beschermd onroerend erfgoed"
   >
@@ -19,16 +16,7 @@
       </AuLinkExternal>
     </li>
     <li class="au-c-list-horizontal__item">
-      {{!-- {{#if this.session.isAuthenticated}}
-        <AuLink
-            @route="auth.logout"
-            @icon="logout"
-          >
-            Afmelden
-          </AuLink>
-      {{else}} --}}
       <AuButton @isCompact={{true}} />
-      {{!-- {{/if}} --}}
     </li>
   </AuMainHeader>
 

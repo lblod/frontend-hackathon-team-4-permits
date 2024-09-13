@@ -20,12 +20,17 @@
     <h2>Heritage Information:</h2>
     <ul>
       {{#each this.heritageInformation as |info|}}
-        <AuCard as |c|><c.header>
-            <AuHeading
-              @skin="4"
+        <AuCard as |c|>
+          <c.header>
+            <AuLink
+              @route="citizen.generic-admission-duties"
             >
-              {{info.naam}}
-            </AuHeading>
+              <AuHeading
+                @skin="4"
+              >
+                {{info.naam}}
+              </AuHeading>
+            </AuLink>
           </c.header>
           <c.content>
             <AuContent>
@@ -37,3 +42,4 @@
     </ul>
   </div>
 </div>
+
