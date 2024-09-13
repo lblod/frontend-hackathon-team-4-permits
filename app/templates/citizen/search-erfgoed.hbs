@@ -1,4 +1,23 @@
 {{page-title "SearchErfgoed"}}
 
-{{this.ids}}
-{{outlet}}
+<div>
+  <label for="search-input">Enter Search Term:</label>
+  <input 
+    id="search-input" 
+    type="text" 
+    value={{this.searchTerm}} 
+    oninput={{this.updateSearchTerm}} 
+    placeholder="Enter search term" 
+  />
+
+  <button {{on "click" this.performSearch}}>Search</button>
+</div>
+
+<div>
+  <h2>Heritage Information:</h2>
+  <ul>
+    {{#each this.heritageInformation as |info|}}
+      <li>{{info.naam}}</li>
+    {{/each}}
+  </ul>
+</div>
