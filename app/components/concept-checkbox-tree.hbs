@@ -2,14 +2,14 @@
 <ul>
   {{#each @model.children as |child|}}
     <li>
-      {{child.label}}
+      <AuCheckbox>{{child.label}}</AuCheckbox>
       <ul>
         {{#each child.children as |child|}}
           <li>
-            {{child.label}}
+            <AuCheckbox>{{child.label}}</AuCheckbox>
             <ul>
               {{#each child.children as |child|}}
-                {{child.label}}
+                <AuCheckbox>{{child.label}}</AuCheckbox>
               {{/each}}
             </ul>
           </li>
