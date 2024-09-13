@@ -57,6 +57,16 @@ export default class SearchErfgoedController extends Controller {
   }
 
   @action
+  getImageUrl(info) {
+    const primaryImageUri = info.relaties[0].primaire_foto;
+    if (primaryImageUri) {
+      const photoId = primaryImageUri.replace('https://id.erfgoed.net/afbeeldingen/', '');
+      return `https://beeldbank.onroerenderfgoed.be/images/${photoId}/content/small`;
+    }
+    return 'https://via.placeholder.com/150';
+  }
+
+  @action
   performSearch() {
     this.ids;
   }
